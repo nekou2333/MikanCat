@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93AC99542B4D9BC500880059 /* TMDb in Frameworks */ = {isa = PBXBuildFile; productRef = 93AC99532B4D9BC500880059 /* TMDb */; };
 		93D17B632B4C492300AEAD1D /* MikanCatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D17B622B4C492300AEAD1D /* MikanCatApp.swift */; };
 		93D17B652B4C492300AEAD1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D17B642B4C492300AEAD1D /* ContentView.swift */; };
 		93D17B672B4C492300AEAD1D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D17B662B4C492300AEAD1D /* Item.swift */; };
 		93D17B692B4C492400AEAD1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D17B682B4C492400AEAD1D /* Assets.xcassets */; };
 		93D17B6C2B4C492400AEAD1D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D17B6B2B4C492400AEAD1D /* Preview Assets.xcassets */; };
 		93D17B742B4C4D6100AEAD1D /* Bangumi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D17B732B4C4D6100AEAD1D /* Bangumi.swift */; };
+		93D17B792B4D925200AEAD1D /* BangumiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D17B782B4D925200AEAD1D /* BangumiListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		93D17B6B2B4C492400AEAD1D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		93D17B6D2B4C492400AEAD1D /* MikanCat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MikanCat.entitlements; sourceTree = "<group>"; };
 		93D17B732B4C4D6100AEAD1D /* Bangumi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bangumi.swift; sourceTree = "<group>"; };
+		93D17B782B4D925200AEAD1D /* BangumiListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangumiListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93AC99542B4D9BC500880059 /* TMDb in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +60,14 @@
 		93D17B612B4C492300AEAD1D /* MikanCat */ = {
 			isa = PBXGroup;
 			children = (
+				93D17B772B4D923500AEAD1D /* Model */,
 				93D17B762B4C508A00AEAD1D /* Parser */,
 				93D17B752B4C507100AEAD1D /* View */,
 				93D17B622B4C492300AEAD1D /* MikanCatApp.swift */,
 				93D17B642B4C492300AEAD1D /* ContentView.swift */,
-				93D17B662B4C492300AEAD1D /* Item.swift */,
 				93D17B682B4C492400AEAD1D /* Assets.xcassets */,
 				93D17B6D2B4C492400AEAD1D /* MikanCat.entitlements */,
 				93D17B6A2B4C492400AEAD1D /* Preview Content */,
-				93D17B732B4C4D6100AEAD1D /* Bangumi.swift */,
 			);
 			path = MikanCat;
 			sourceTree = "<group>";
@@ -80,6 +83,7 @@
 		93D17B752B4C507100AEAD1D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				93D17B782B4D925200AEAD1D /* BangumiListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -89,6 +93,15 @@
 			children = (
 			);
 			path = Parser;
+			sourceTree = "<group>";
+		};
+		93D17B772B4D923500AEAD1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93D17B662B4C492300AEAD1D /* Item.swift */,
+				93D17B732B4C4D6100AEAD1D /* Bangumi.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +120,9 @@
 			dependencies = (
 			);
 			name = MikanCat;
+			packageProductDependencies = (
+				93AC99532B4D9BC500880059 /* TMDb */,
+			);
 			productName = MikanCat;
 			productReference = 93D17B5F2B4C492300AEAD1D /* MikanCat.app */;
 			productType = "com.apple.product-type.application";
@@ -128,13 +144,17 @@
 			};
 			buildConfigurationList = 93D17B5A2B4C492300AEAD1D /* Build configuration list for PBXProject "MikanCat" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "zh-Hans";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 93D17B562B4C492300AEAD1D;
+			packageReferences = (
+				93AC99522B4D9BC500880059 /* XCRemoteSwiftPackageReference "TMDb" */,
+			);
 			productRefGroup = 93D17B602B4C492300AEAD1D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -164,6 +184,7 @@
 				93D17B652B4C492300AEAD1D /* ContentView.swift in Sources */,
 				93D17B672B4C492300AEAD1D /* Item.swift in Sources */,
 				93D17B632B4C492300AEAD1D /* MikanCatApp.swift in Sources */,
+				93D17B792B4D925200AEAD1D /* BangumiListView.swift in Sources */,
 				93D17B742B4C4D6100AEAD1D /* Bangumi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MikanCat/MikanCat.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -312,6 +334,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.nekou2333.MikanCat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -323,6 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MikanCat/MikanCat.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -340,6 +364,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.nekou2333.MikanCat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -367,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93AC99522B4D9BC500880059 /* XCRemoteSwiftPackageReference "TMDb" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamayoung/TMDb";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93AC99532B4D9BC500880059 /* TMDb */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93AC99522B4D9BC500880059 /* XCRemoteSwiftPackageReference "TMDb" */;
+			productName = TMDb;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93D17B572B4C492300AEAD1D /* Project object */;
 }

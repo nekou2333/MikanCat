@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import TMDb
 
 @main
 struct MikanCatApp: App {
@@ -22,6 +23,9 @@ struct MikanCatApp: App {
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
+        
+        let tmdbConfiguration = TMDbConfiguration(apiKey: "6d1fb35dc01d7b0e339a8747fb8450c7")
+        TMDb.configure(tmdbConfiguration)
     }()
 
     var body: some Scene {

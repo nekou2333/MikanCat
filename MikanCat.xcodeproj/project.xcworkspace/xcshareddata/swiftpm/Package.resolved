@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "tmdb",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/adamayoung/TMDb",
+      "state" : {
+        "revision" : "59070ab6dd846a1c7ce5837e905df1af5187f5b2",
+        "version" : "10.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}
