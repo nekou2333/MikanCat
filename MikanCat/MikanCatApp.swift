@@ -14,7 +14,8 @@ struct MikanCatApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
-            Bangumi.self
+            Bangumi.self,
+            RssItem.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

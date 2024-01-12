@@ -10,16 +10,16 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Bangumi]
+    @Query private var items: [Item]
 
     var body: some View {
         NavigationSplitView {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.official_title)")
+                        Text("Item at \(item.timestamp)")
                     } label: {
-                        Text(item.official_title)
+                        Text("\(item.timestamp)")
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -39,7 +39,7 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Bangumi(official_title: "", year: "", title_raw: "", season: 1, season_raw: "", group_name: "", dpi: "", source: "", subtitle: "", eps_collect: true, offset: 1, filter: "", rss_link: "", poster_link: "", added: true, rule_name: "", save_path: "", deleted: false)
+            let newItem = Item(timestamp: Date())
             modelContext.insert(newItem)
         }
     }
@@ -55,5 +55,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Bangumi.self, inMemory: true)
+        .modelContainer(for: Item.self, inMemory: true)
 }

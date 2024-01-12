@@ -29,26 +29,7 @@ final class Bangumi {
     var save_path: String = ""
     var deleted: Bool = false
     
-    init(official_title: String, year: String, title_raw: String, season: Int, season_raw: String, group_name: String, dpi: String, source: String, subtitle: String, eps_collect: Bool, offset: Int, filter: String, rss_link: String, poster_link: String, added: Bool, rule_name: String, save_path: String, deleted: Bool) {
-        self.official_title = official_title
-        self.year = year
-        self.title_raw = title_raw
-        self.season = season
-        self.season_raw = season_raw
-        self.group_name = group_name
-        self.dpi = dpi
-        self.source = source
-        self.subtitle = subtitle
-        self.eps_collect = eps_collect
-        self.offset = offset
-        self.filter = filter
-        self.rss_link = rss_link
-        self.poster_link = poster_link
-        self.added = added
-        self.rule_name = rule_name
-        self.save_path = save_path
-        self.deleted = deleted
-    }
+    init(){}
     
     init(official_title: String, season: Int) {
         self.official_title = official_title
